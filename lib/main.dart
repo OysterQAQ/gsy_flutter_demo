@@ -44,6 +44,8 @@ import 'package:gsy_flutter_demo/widget/transform_demo_page.dart';
 import 'package:gsy_flutter_demo/widget/verification_code_input_demo_page.dart';
 import 'package:gsy_flutter_demo/widget/viewpager_demo_page.dart';
 
+import 'widget/test_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -103,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 const routerName = [
+  "Container 例子",
   "Controller 例子",
   "圆角 例子",
   "滑动监听 例子",
@@ -150,6 +153,9 @@ const routerName = [
 ];
 
 Map<String, WidgetBuilder> routers = {
+  "widget/test": (context) {
+    return new TestPage();
+  },
   "widget/controller": (context) {
     return new ControllerDemoPage();
   },
